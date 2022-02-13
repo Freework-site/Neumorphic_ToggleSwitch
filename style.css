@@ -1,0 +1,52 @@
+/* #e4ebf5 #6d5dfc #9baacf */
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #e4ebf5;
+}
+input
+{
+	position: relative;
+	width: 100px;
+	height: 40px;
+	appearance: none;
+	-webkit-appearance: none;
+	background-color: #e4ebf5;
+	outline: none;
+	border-radius: 20px;
+	box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25),
+	-8px -8px 12px rgba(255, 255, 255, 0.3);
+	cursor: pointer;
+	transition: .5s ;
+}
+input:checked
+{
+	background-color: #6d5dfc;
+}
+input::before
+{
+	content: '';
+	width: 30px;
+	height: 30px;
+	background-color: #9baacf;
+	top: 5px;
+	left: 5px;
+	position: absolute;
+	border-radius: 50%;
+	transition: .5s;
+}
+input:checked::before
+{
+	background-color: #fff;
+	transform: translateX(60px);
+}
